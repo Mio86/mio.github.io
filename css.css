@@ -1,0 +1,158 @@
+.bodyIn {
+    background-color: #adadad;
+}
+.container{
+    margin-top: 50px;
+}
+.headingLink {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0;
+}
+.panel-body.no-gutter{
+    margin: 0;
+    padding: 0;
+}
+.list-group-item.no-gutter{
+    margin: 0;
+    padding: 0;
+    position:relative;
+    z-index:100;
+}
+.list.no-gutter {
+    margin: 0;
+    padding: 0;
+}
+.forScroll, .dataSeasons {
+    overflow-y: auto;
+    height: auto;
+    max-height: 700px;
+}
+.title.no-gutter{
+    margin: 0;
+   padding-top: 1px;
+}
+.info.no-gutter{
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #adadad;
+    font-size: 12px;
+}
+.table.no-gutter{
+    margin: 0;
+    padding: 0;
+}
+.poster.no-gutter{
+    margin: 0;
+    padding: 0;
+    width: 182px;
+    height: 268px;
+    overflow: hidden;
+}
+.poster img {
+    position: absolute;
+    clip: rect(0px, 182px, 268px, 0px);
+}
+.col-xs-3 img {
+    width: 20px;
+    height: 20px;
+}
+.modal-header.no-gutter{
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+.imdbrating.no-gutter{
+    margin: 0;
+    padding: 0;
+}
+.container.no-gutter {
+    margin-top: 0;
+    padding-top: 0;
+}
+.sPlot, .fPlot {
+    font-size: 13px;
+    display: inline;
+}
+.fullPlot, .lessPlot {
+    font-size: 12px;
+    display: inline;
+}
+.bodyInfo{
+    font-size: 13px;
+    color: #5e5e5e;
+    margin-top: 15px;
+}
+.director, .writer, .actors {
+    font-size: 13px;
+    display: inline;
+    color: #66afe9;
+}
+.divMeta {
+    background-color:#66CC33;
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+    text-align: center;
+    color: white;padding-top: 5px;
+    margin-top: 15px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: 33%;
+}
+.divRating {
+    width: 100px;
+    height: 40px;
+    display: inline;
+}
+.imdbrating {
+    display: inline;
+    color: #66afe9;
+}
+.fromrating {
+    color: #5e5e5e;
+    font-size: 12px;
+}
+.votes {
+    font-size: 12px;
+    color: #5e5e5e;
+}
+.imdbvotes {
+    font-size: 12px;
+    color: #66afe9;
+}
+.season {
+    font-size: 13px;
+    color: #5e5e5e;
+    margin-top: 15px;
+}
+.totalseasons, .episodeIn, .seasonIn {
+    font-size: 12px;
+    color: #66afe9;
+}
+.seasonNo, .episodeNo {
+    font-size: 13px;
+    color: #5e5e5e;
+    display: inline-block;
+    margin-left: 20px;
+}
+.divAwards {
+    margin-bottom: 0;
+    padding: 5px 0 5px 20px;
+    background-color: #EFE3A4;
+    font-size: 13px;
+}
+#episodeList {
+    color: #ffffff;
+}
+.hlSeason {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+#title {
+ max-width: 500px;
+}
+#backInfo, #close {
+    color: #ffffff;
+}
