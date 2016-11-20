@@ -142,9 +142,6 @@
     background-color: #EFE3A4;
     font-size: 13px;
 }
-#episodeList {
-    color: #ffffff;
-}
 .hlSeason {
     color: #ffffff;
     font-size: 16px;
@@ -153,6 +150,10 @@
 #title {
  max-width: 500px;
 }
-#backInfo, #close {
+#backInfo, #episodeList {
     color: #ffffff;
+}
+.row.no-gutter {
+     margin: 0;
+     padding: 0;
 }
