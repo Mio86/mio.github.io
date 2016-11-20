@@ -38,73 +38,74 @@
     </div>
 </div>
 <div class="container">
-    <!--Suggest box-->
     <div class="row">
-        <div class="col-md-2 hidden-xs hidden-sm" style="float: left">
-            <p>Hello, I'm Mio.
+        <div class="col-md-12">
+            <p class="col-md-2">Hello, I'm Mio.
                 I'm interested to research about javascript and this is a project that is developed by me,
                 based on searching series and movies by title. Everything that i need to develop this project, was taken from <a href="http://omdbapi.com" target="_blank">omdbapi.com</a>
-                <br>Enjoy.
+                Enjoy.
             </p>
-        </div>
-        <div  id="suggest" class="col-md-5 col-md-offset-1">
-            <div class="panel panel-primary">
-                <div class="panel-heading text-center"><p class="headingLink" >Suggested search </p>
-                </div>
-                <div class="forScroll">
-                <ul class="list-group dataTitle">
-                </ul>
-                </div>
-            </div>
-        </div>    <!--result Box-->
-        <div class="col-md-7 contentSlide">
-            <div class="panel panel-primary ">
-                <div class="panel-heading">
-                    <button type="button" id="backInfo" class="close"><span>&times;</span></button>  <!--close Button-->
-                    <button type="button" id="close" class="close"><span>&times;</span></button>
-                    <h2 class="title no-gutter"></h2>    <!--title-->
-                    <p class="info no-gutter"></p>  <!--info-->
-                </div>
-                    <table class="table no-gutter">
-                        <tr><td class="poster no-gutter hidden-xs"></td>  <!--poster-->
-                            <td>
-                                <p class="sPlot"></p>  <!--short Plot-->
-                                <p class="fPlot"></p>
-                                <a href="#" class="fullPlot">more...</a>
-                                <a href="#" class="lessPlot">less...</a>
-                                <div class="bodyInfo"><b>Director: </b><p class="director" ></p></div>     <!--body Info-->
-                                <div class="bodyInfo"><b>Writer: </b><p class="writer"></p></div>
-                                <div class="bodyInfo"><b>Stars: </b><p class="actors"></p></div>
-                                <div class="divMeta"><span class="metascore"></span></div>
-                                <div class="divRating">
-                                    <h2 class="imdbrating"></h2>
-                                    <span class="fromrating">/10</span>
-                                    <span class="votes"> | Votes: </span>
-                                    <span class="imdbvotes" ></span>
-                                    <p class="season"><b>Seasons: </b><span class="totalseasons"></span>
-                                    <p class="seasonNo"><b>Season: </b><span class="seasonIn"></span></p>
-                                    <p class="episodeNo"><b>Episode: </b><span class="episodeIn"></span></p>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="divAwards"><b class="awards"></b></div>
-                </div>
-            </div>
-        <div class="contentSeason"> <!--seasons Info-->
-            <div class="col-md-3">
-                <div class="panel panel-primary">
-                    <div class="panel-heading text-center">
-                        <button type="button" id="episodeList" class="close"><span>&times;</span></button>
-                        <p class="hlSeason">Season: <span class="linkSeason"></span></p>
+            <div class="row no-gutter">
+                <!--Suggest box-->
+                <div  id="suggest" class="col-md-5 col-md-offset-1">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading text-center"><p class="headingLink" >Suggested search </p>
+                        </div>
+                        <div class="forScroll">
+                            <ul class="list-group dataTitle">
+                            </ul>
+                        </div>
                     </div>
-                    <ul class="list-group list-unstyled dataSeasons">
-                    </ul>
+                </div>    <!--result Box-->
+                <div class="col-md-7 contentSlide">
+                    <div class="panel panel-primary ">
+                        <div class="panel-heading">
+                            <button type="button" id="backInfo" class="close"><span>&times;</span></button>  <!--close Button-->
+                            <h2 class="title no-gutter"></h2>    <!--title-->
+                            <p class="info no-gutter"></p>  <!--info-->
+                        </div>
+                        <table class="table no-gutter">
+                            <tr><td class="poster no-gutter hidden-xs"></td>  <!--poster-->
+                                <td>
+                                    <p class="sPlot"></p>  <!--short Plot-->
+                                    <p class="fPlot"></p>
+                                    <a href="#" class="fullPlot">more...</a>
+                                    <a href="#" class="lessPlot">less...</a>
+                                    <div class="bodyInfo"><b>Director: </b><p class="director" ></p></div>     <!--body Info-->
+                                    <div class="bodyInfo"><b>Writer: </b><p class="writer"></p></div>
+                                    <div class="bodyInfo"><b>Stars: </b><p class="actors"></p></div>
+                                    <div class="divMeta"><span class="metascore"></span></div>
+                                    <div class="divRating">
+                                        <h2 class="imdbrating"></h2>
+                                        <span class="fromrating">/10</span>
+                                        <span class="votes"> | Votes: </span>
+                                        <span class="imdbvotes" ></span>
+                                        <p class="season"><b>Seasons: </b><span class="totalseasons"></span>
+                                        <p class="seasonNo"><b>Season: </b><span class="seasonIn"></span></p>
+                                        <p class="episodeNo"><b>Episode: </b><span class="episodeIn"></span></p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="divAwards"><b class="awards"></b></div>
+                    </div>
+                </div>
+                <div class="contentSeason"> <!--seasons Info-->
+                    <div class="col-md-3">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading text-center">
+                                <button type="button" id="episodeList" class="close"><span>&times;</span></button>
+                                <p class="hlSeason">Season: <span class="linkSeason"></span></p>
+                            </div>
+                            <ul class="list-group list-unstyled dataSeasons">
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+</div>
 <script src="index.js"></script>
 </body>
 </html>
