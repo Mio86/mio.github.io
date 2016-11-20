@@ -48,7 +48,6 @@ $(document).ready(function () {
                     "  </span>" + "<span style='position: absolute; right: 0; bottom: 0; font-size: 12px; padding-right: 20px'>" + titleItem.Type + "</span> " + "</a></li>";
             });
 
-
                 if (json.Response === "False") {
                 $(".dataTitle").append("<li style='list-style: none; text-align: center'>Movie not found</li>");
                 return;
@@ -91,31 +90,6 @@ $(document).ready(function () {
                 }, function() {
                     $(this).css('background-color', '')
                 });
-
-            $("#close").on("click", function () {
-                $(".totalseasons").html("");
-                $(".seasonNo").hide(0);
-                $(".episodeNo").hide(0);
-                $("#imdbID").val($("#simdbID").val());
-                $(".contentSlide").show(0);
-                $form.submit();
-                $(".fullPlot").show(0);
-                $(".fPlot").hide(0);
-                $(".sPlot").show(0);
-            });
-
-            $("#backInfo").on("click", function () {
-                $(".dataSeasons").html("");
-                $(".totalseasons").html("");
-                $(".seasonNo").hide(0);
-                $(".episodeNo").hide(0);
-                $("#imdbID").val($("#simdbID").val());
-                $(".contentSlide").hide(0);
-                $form.submit();
-                $(".fullPlot").show(0);
-                $(".fPlot").hide(0);
-                $(".sPlot").show(0);
-            });
 
             $form.on("keyup", function () {
                 $(".contentSeason").hide(0);
@@ -192,15 +166,31 @@ $(document).ready(function () {
             });
 
         $("#backInfo").on("click", function () {
-            $(".contentSlide").hide(0);
-            $("#title").val(sMovie).submit();
-            $(".contentSeason").hide(0);
-            $(".seasonNo").hide(0);
-            $(".episodeNo").hide(0);
-            $(".fullPlot").show(0);
-            $(".fPlot").hide(0);
-            $(".sPlot").show(0);
-            $("#suggest").show(0);
+            $.getJSON("https://www.omdbapi.com/?i="+ sImdb + "&y=" + sYear + "&plot=",
+                function (json) {
+                    if (json.Type == "episode"){
+                       $(".totalseasons").html("");
+                        $(".seasonNo").hide(0);
+                        $(".episodeNo").hide(0);
+                        $("#imdbID").val($("#simdbID").val());
+                        $(".contentSlide").show(0);
+                        $("#suggest").hide(0);
+                        $form.submit();
+                        $(".fullPlot").show(0);
+                        $(".fPlot").hide(0);
+                        $(".sPlot").show(0);
+                    }else{
+                        $(".contentSlide").hide(0);
+                        $("#title").val(sMovie).submit();
+                        $(".contentSeason").hide(0);
+                        $(".seasonNo").hide(0);
+                        $(".episodeNo").hide(0);
+                        $(".fullPlot").show(0);
+                        $(".fPlot").hide(0);
+                        $(".sPlot").show(0);
+                        $("#suggest").show(0);
+                    }
+                })
         });
 
         $form.on("keyup", function (event) {
@@ -232,19 +222,13 @@ $(document).ready(function () {
                 }
                 if ($(".totalseasons a").length == json.totalSeasons){
                     return false;
-                }else{
+                }else {
                     var countSeason = 1;
                     for (var season = json.totalSeasons; countSeason <= season; season--){
                         $(".totalseasons").append(" " + "<a data-season='" + season + "' href='#' style='margin-left: 4px; font-size: 13px'>" + season + "</a>");
                     }
                 }
-                if (json.Type === "episode"){
-                    $("#backInfo").hide();
-                    $("#close").show();
-                }else {
-                    $("#close").hide();
-                    $("#backInfo").show();
-                }
+
                 title.html(json.Title + " " +"<p style='display: inline; font-size: 25px; color: #adadad'>"+ "(" + json.Year + ")" +"</p>");
                 $(".info").text(json.Rated + " | " + json.Runtime + " | " + json.Genre + " | " + json.Language + " | " + json.Released + " " + "(" + json.Country + ")");
                 $(".modTitle").html("<h3 style='display: inline'>" + json.Title + " " + "(" + json.Year + ")" + "</h3>");
@@ -262,6 +246,10 @@ $(document).ready(function () {
                     $(".episodeIn").text(json.Episode);
                 }else{
                     $(".poster").html("<img style='width: 182px; height: 268px' src=" + json.Poster + "/>");
+                }
+                if (json.Type == "series"){
+                    $(".seasonNo").hide();
+                    $(".episodeNo").hide();
                 }
                 $(".metascore").text(json.Metascore);
                 $(".imdbrating").text(json.imdbRating);
