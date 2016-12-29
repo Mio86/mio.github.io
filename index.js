@@ -5,17 +5,6 @@ $(document).ready(function () {
     var page = 1;
     var globalTimeout = null;
 
-    $(".contentSlide").hide();
-    $(".contentSeason").hide();
-    $("#suggest").hide();
-    $("#year").hide();
-    $("#imdbID").hide();
-    $("#simdbID").hide();
-    $(".season").hide();
-    $(".totalseasons").hide();
-    $(".seasonNo").hide();
-    $(".episodeNo").hide();
-
     $form.on("keyup", function (event) {
         event.preventDefault();
             if (globalTimeout != null) {
