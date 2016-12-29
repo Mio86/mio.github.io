@@ -157,3 +157,6 @@
      margin: 0;
      padding: 0;
 }
+.contentSlide, .contentSeason, #year, #suggest, #imdbID, #simdbID, .season, .totalseasons, .seasonNo, .episodeNo  {
+    display: none;
+}
