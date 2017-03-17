@@ -50,7 +50,8 @@ $(document).ready(function () {
             }, 500);
     });
 
-    $(".totalseasons").on("click", function () {
+    $(".totalseasons").on("click", function (event) {
+        event.preventDefault();
         var seasons = $("a:focus").attr('data-season');
         $.getJSON("https://www.omdbapi.com/?i=" + sImdb + "&Season=" + seasons , function (json) {
             allSeasons = $.map(json.Episodes, function (seasonItem, index) {
